@@ -9,7 +9,34 @@
 <sript>
     <script type="text/javascript">
 
-        function isUsupportedVersion() {}
+
+        function unsupportedVersions() {
+            var students = [
+                {
+                    browser: "firefox",
+                    olderThan: 23,
+                },
+
+                {
+                    browser: "chrome",
+                    olderThan: 12,
+                },
+            ]
+
+            students.forEach(myFunction);
+
+            function myFunction(item, index) {
+
+                for (var key in item) {
+                    alert("We do not not support Browser " + item.browser + " older than Version" + item.olderThan);;
+                }
+
+            }
+        }
+
+        unsupportedVersions();
+
+
 
         function getBrowserName() {
 
@@ -79,6 +106,7 @@
 
 
         console.log(navigator.browserSpecs); //Object { name: "Firefox", version: "42" }
+
 
     </script>
 </sript>
